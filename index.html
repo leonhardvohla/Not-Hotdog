@@ -15,21 +15,18 @@
 
     <meta name="viewport" content="user-scalable=no">
 
-    <!-- Matomo -->
     <script type="text/javascript">
         var _paq = window._paq || [];
-        /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
         _paq.push(['trackPageView']);
         _paq.push(['enableLinkTracking']);
         (function() {
-        var u="https://leonhard.changeip.org/sonstiges/analytics/";
-        _paq.push(['setTrackerUrl', u+'matomo.php']);
-        _paq.push(['setSiteId', '1']);
-        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-        g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+            var u="https://leonhard.changeip.org/sonstiges/analytics/";
+            _paq.push(['setTrackerUrl', u+'matomo.php']);
+            _paq.push(['setSiteId', '1']);
+            var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+            g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
         })();
     </script>
-    <!-- End Matomo Code -->
 </head>
 
 <body>
@@ -61,22 +58,24 @@
     <span id="help">Tap to start and stop</span>
 
     <div id="result">
-        <div id="evaluating">
-            <div class="sk-circle">
-                <div class="sk-circle1 sk-child"></div>
-                <div class="sk-circle2 sk-child"></div>
-                <div class="sk-circle3 sk-child"></div>
-                <div class="sk-circle4 sk-child"></div>
-                <div class="sk-circle5 sk-child"></div>
-                <div class="sk-circle6 sk-child"></div>
-                <div class="sk-circle7 sk-child"></div>
-                <div class="sk-circle8 sk-child"></div>
-                <div class="sk-circle9 sk-child"></div>
-                <div class="sk-circle10 sk-child"></div>
-                <div class="sk-circle11 sk-child"></div>
-                <div class="sk-circle12 sk-child"></div>
+        <div id="overlay">
+            <div id="evaluating">
+                <div class="sk-circle">
+                    <div class="sk-circle1 sk-child"></div>
+                    <div class="sk-circle2 sk-child"></div>
+                    <div class="sk-circle3 sk-child"></div>
+                    <div class="sk-circle4 sk-child"></div>
+                    <div class="sk-circle5 sk-child"></div>
+                    <div class="sk-circle6 sk-child"></div>
+                    <div class="sk-circle7 sk-child"></div>
+                    <div class="sk-circle8 sk-child"></div>
+                    <div class="sk-circle9 sk-child"></div>
+                    <div class="sk-circle10 sk-child"></div>
+                    <div class="sk-circle11 sk-child"></div>
+                    <div class="sk-circle12 sk-child"></div>
+                </div>
+                <span>Evaluating...</span>
             </div>
-            <span>Evaluating...</span>
         </div>
         <div id="hotdog">
             <div></div>
@@ -85,6 +84,11 @@
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.96 28.11">
                 <polygon class="a" points="3.5 13.96 0.7 16.86 11.36 27.41 35.26 3.51 32.46 0.71 11.36 21.81 3.5 13.96"/>
             </svg>
+        </div>
+        <div id="advanced">
+            <span id="label">More accurate<br /> classification</span>
+            <span id="description"></span>
+            <div id="toggle"><span id="state">OFF</span></div>
         </div>
         <div id="not-hotdog">
             <div></div>
@@ -95,16 +99,6 @@
             </svg>
         </div>
     </div>
-
-    <!-- <div id="container">
-    
-        <video autoplay="true" id="videoElement">
-        </video>
-    
-    </div>
-
-    <script src="./scripts/script.js"></script> -->
-    <script src="./scripts/sketch.js"></script>
-
+    <script src="./scripts/app.js"></script>
 </body>
 </html>
